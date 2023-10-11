@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="codmob.com.campuswallet.Diary.EDiary.FromTeacherFragment">
+ <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+     android:id="@+id/FromteacherSRL"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/FromteacherRV">
+
+  </androidx.recyclerview.widget.RecyclerView>
+
+ </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+ <ProgressBar
+     android:id="@+id/ProgressBar"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center"
+     android:indeterminateDrawable="@drawable/progressbar_campus_wallet"
+     />
+ <include
+     android:id="@+id/ErrorLL"
+     layout="@layout/error_layout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_marginBottom="0dp"
+     android:layout_marginEnd="0dp"
+     android:layout_gravity="center"
+     android:visibility="gone"
+     android:layout_marginStart="0dp" />
+ <include
+     android:id="@+id/NodataLL"
+     layout="@layout/no_data_layout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_marginBottom="0dp"
+     android:layout_marginEnd="0dp"
+     android:layout_marginStart="0dp"
+     android:layout_gravity="center"
+     android:visibility="gone"/>
+
+</FrameLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardLay">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/createdLay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/cyan"
+                android:id="@+id/name"
+                android:textSize="@dimen/text_size_large"
+                android:textAllCaps="true"
+                android:text="Principal"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/quotes"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_quotes"
+                android:layout_below="@+id/name"
+                android:contentDescription="Quotes"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quotes"
+                android:id="@+id/second"
+                android:layout_toLeftOf="@+id/imageid"
+                android:layout_toRightOf="@+id/quotes">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"
+                    android:autoLink="web"
+                    android:id="@+id/tv_content"
+                    android:text="Sample text"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TvDue"
+                    android:textSize="@dimen/text_size_medium"
+                    android:layout_below="@+id/tv_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Due on 21/12/16"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/imageid"
+                android:layout_below="@+id/quotes"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Quotes"
+                />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@+id/second"
+                android:layout_alignStart="@+id/name"
+                android:contentDescription="Calendar"
+                android:src="@drawable/ic_notice_calendar" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

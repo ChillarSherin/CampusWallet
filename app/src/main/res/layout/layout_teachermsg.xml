@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg_color"
+    android:id="@+id/cardLay">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/createdLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/TvBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Principal"
+                android:textAllCaps="true"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/quotes"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/TvBy"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Quotes"
+                android:src="@drawable/ic_quotes" />
+
+
+            <RelativeLayout
+                android:id="@+id/parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quotes"
+                android:layout_toRightOf="@+id/quotes">
+
+                <RelativeLayout
+                    android:id="@+id/second"
+                    android:layout_width="200dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sample text f,mdnfk;sflds;lfk;lsdkf;ldskf;lkds;lfk;lsdkf;ldks;flkdsl;fkl;sl;fdklfkdl;skfl;dkfl;skdfl;ksld;"
+                        android:autoLink="web"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TvDue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Due on 21/12/16"
+                        android:textSize="10sp" />
+
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/imageid"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="Image" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:layout_below="@+id/parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_div" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:contentDescription="Calendar"
+                android:src="@drawable/ic_notice_calendar" />
+
+            <TextView
+                android:id="@+id/TvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/image2"
+                android:paddingBottom="1dp"
+                android:visibility="gone"
+                android:textSize="10sp"
+                android:text="30/11/16" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

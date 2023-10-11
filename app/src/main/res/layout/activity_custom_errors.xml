@@ -1,0 +1,110 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_nodata"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Error"
+            android:src="@drawable/internet_down" />
+
+
+        <TextView
+            android:id="@+id/CrashTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nodata"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/toast_unexpected_error"
+            android:textSize="18sp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/CrashTxtDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CrashTxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/plese_click_to_continue"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="#59969696"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout6"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <Button
+            android:id="@+id/restart_button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_loginbtn"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/continue1"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            />
+
+        <!--<com.codmob.devotee.widgets.MyButton-->
+        <!--android:id="@+id/restart_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:background="@color/devotee_orange"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:text="Continue" />-->
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

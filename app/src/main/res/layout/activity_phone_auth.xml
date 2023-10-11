@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:windowSoftInputMode="adjustResize">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/sublay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sublay2">
+
+            <ImageView
+                android:id="@+id/imageviewphone"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/newotp_icon" />
+
+            <TextView
+                android:id="@+id/textid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageviewphone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="OTP has been sent to you on your \n mobile number"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:textColor="@color/txtnewGrey"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sublay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sublay3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/et_otp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/linebackround"
+                android:gravity="center"
+                android:hint="ENTER YOUR OTP"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="#CDCDCD"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sublay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/continuebtn"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/generateotpback"
+                android:gravity="center"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="#FFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/continuebtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:text="Resend SMS"
+                android:textColor="@color/txtnewGrey"
+
+                />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

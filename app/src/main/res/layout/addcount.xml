@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:background="@color/app_bg_color">
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/actionbarbg"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addcounttittle"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:textSize="18sp"
+            />
+
+
+        <ImageView
+            android:id="@+id/drawer_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_close"
+            android:contentDescription="Close"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/itemid"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_name"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/dark_grey1"
+                android:id="@+id/itemname"
+                android:layout_alignParentTop="true"
+               />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view"
+                android:layout_marginTop="5dp"
+                android:background="@color/txtgrey"
+                android:layout_below="@+id/itemname"
+                >
+            </View>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/dark_grey"
+                android:id="@+id/itempriceid"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addcount"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/itemid"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:id="@+id/addcount"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/countedt"
+            android:layout_marginTop="20dp"
+            android:hint="@string/addcounthint"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_below="@id/addcount"
+            android:background="@drawable/bg_edittext"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/countedt"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/addcart"
+            android:background="@drawable/bg_recharge_btn"
+            android:text="@string/addtocart"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

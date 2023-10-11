@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:background="@drawable/bg_recharge_head"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/HeaderTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_large"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+            android:text="TITLE"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/BackIV"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_back_arrow"
+            app:srcCompat="@drawable/ic_back_arrow" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_parent_maps"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout16"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:background="@drawable/bus_system_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout16"
+        app:layout_constraintVertical_bias="0.16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/InRouteTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="@string/inroute"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsSTOPLL"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <!-- Column 1 -->
+            <TextView
+                android:id="@+id/InstopTV"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:padding="2dip"
+                android:text="@string/instop"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <!-- Column 2 -->
+            <!--<TextView-->
+            <!--android:id="@+id/InstopTimeTV"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="Waiting..." />-->
+
+            <!-- Column 3 -->
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight=".4"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="|"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <!-- Column 3 -->
+            <TextView
+                android:id="@+id/OutStopTV"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:padding="2dip"
+                android:text="@string/outstop"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <!-- Column 3 -->
+            <!--<TextView-->
+            <!--android:id="@+id/OutStopTimeTV"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_weight="1"-->
+            <!--android:padding="10dip"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="Waiting..." />-->
+
+        </LinearLayout>
+
+        <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_marginLeft="40dp"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:stretchColumns="1">-->
+        <!--<TableRow>-->
+        <!--<TextView-->
+        <!--android:id="@+id/InRouteTV"-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="20sp"-->
+        <!--android:gravity="left"-->
+        <!--android:layout_weight="1"-->
+        <!--android:textStyle="bold"-->
+        <!--android:text="InRoute" />-->
+        <!--</TableRow>-->
+
+        <!--<TableRow>-->
+        <!--&lt;!&ndash; Column 1 &ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:id="@+id/InstopTV"-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:padding="2dip"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="Instop" />-->
+
+        <!--&lt;!&ndash; Column 2 &ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/InstopTimeTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="18sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Waiting..." />&ndash;&gt;-->
+
+        <!--&lt;!&ndash; Column 3 &ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:padding="10dip"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_margin="2dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:text="|" />-->
+        <!--&lt;!&ndash; Column 3 &ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:id="@+id/OutStopTV"-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:padding="2dip"-->
+        <!--android:textSize="18sp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="OutStop" />-->
+        <!--&lt;!&ndash; Column 3 &ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/OutStopTimeTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="18sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Waiting..." />&ndash;&gt;-->
+        <!--</TableRow>-->
+        <!--&lt;!&ndash;<TableRow>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/OutRouteTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/mapbusgreen"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_margin="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="OutRoute" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</TableRow>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TableRow&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="gone">&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; Column 1 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/backInstopTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/black"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Instop" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;&lt;!&ndash; Column 2 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/backInstopTimeTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/col_google"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Waiting..." />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;&lt;!&ndash; Column 3 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/black"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_margin="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="-" />&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; Column 3 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/backOutStopTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/black"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Out Stop" />&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; Column 3 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/backOutStopTimeTV"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="0dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/col_google"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="10dip"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Waiting..." />&ndash;&gt;-->
+        <!--&lt;!&ndash;</TableRow>&ndash;&gt;-->
+        <!--</TableLayout>-->
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="200dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

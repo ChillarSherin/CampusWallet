@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom=".5dp"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop=".5dp"
+        android:gravity="center_horizontal|bottom"
+        android:id="@+id/Mainlayout"
+        android:clickable="true"
+        >
+
+        <ImageView
+            android:id="@+id/imageidicon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Icon"
+            >
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/itemnameid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="textview"
+            android:textColor="@color/txtdarkgrey"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:textAllCaps="true"
+            android:textSize="18sp" >
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:id="@+id/viewidnew"
+            android:visibility="visible"
+            android:background="@color/txtdarkgrey"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg_color2"
+        android:layout_marginRight="2dp"
+        />
+
+
+</LinearLayout>

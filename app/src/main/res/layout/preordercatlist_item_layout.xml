@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:id="@+id/cadviewid"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lay1"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ITEMNAME"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/txtdarkgrey"
+                android:id="@+id/itemnameid"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:layout_weight="1"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rupees"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/rupeesid"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/priceid"
+                    android:textColor="@color/txtdarkgrey"
+                    android:layout_toRightOf="@+id/rupeesid"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/edit_grey"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

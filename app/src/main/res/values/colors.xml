@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a8ad8</color>
+    <color name="colorPrimaryDark">#FF157CA9</color>
+    <color name="colorAccent">#1ca1dc</color>
+    <color name="teal_700">#1ca1dc</color>
+    <color name="teal_200">#1ca1dc</color>
+    <color name="purple_700">#1ca1dc</color>
+    <color name="purple_500">#1ca1dc</color>
+    <color name="purple_200">#1ca1dc</color>
+    <color name="caldroid_darker_gray">#4E5051</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey_font">#e4e4e4</color>
+    <color name="actionbarbg">#1ca1dc</color>
+    <color name="actionbarbgdark">#157ca9</color>
+    <color name="white">#ffffff</color>
+    <color name="appgreen">#d2e4a6</color>
+    <color name="txtgrey">#979797</color>
+    <color name="buttoncolor">#979797</color>
+    <color name="txtdarkgrey">#686a6b</color>
+    <color name="txtnewGrey">#535454</color>
+    <color name="app_bg_color">#f2f2f2</color>
+    <color name="app_bg_color2">#cac9c9</color>
+    <color name="greylayoutbg">#f3f3f3</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+
+    <color name="green">#2ecc71</color>
+    <color name="darkgreen">#397b55</color>
+    <color name="green_txt">#62d27a</color>
+    <color name="blue">#2a8ad8</color>
+
+    <color name="mapbusgreen">#80c24b</color>
+    <color name="mapbusblue">#1da1dc</color>
+
+    <color name="cyan">#1abc9c</color>
+
+
+    <color name="orange">#FF8602</color>
+
+    <color name="black">#000000</color>
+    <color name="error_bg">#f2f2f2</color>
+
+
+
+    <color name="col_google">#DD4C3A</color>
+    <color name="col_facebook">#3C5A99</color>
+
+    <color name="caldroid_light_red">#FF4156</color>
+    <color name="dots_color">#FE2E64</color>
+    <color name="v_grey">#EAEAEA</color>
+
+    <color name="dark_grey">#424242</color>
+    <color name="dark_grey1">#333131</color>
+
+    <color name="button_color">#01dfa5</color>
+
+    <color name="grey_div">#ebedee</color>
+
+
+    <color name="layt_col">#50D2C2</color>
+
+    <color name="duskYellow">#F8BB24</color>
+    <color name="lightGrey">#e9e7e7</color>
+    <color name="lightGreynew">#f5f4f4</color>
+
+
+    <color name="edit_grey">#BBBBBE</color>
+    <color name="very_dark_gray">#343434</color>
+    <color name="dark_grayish_blue">#78777D</color>
+    <color name="gray">#6D7371</color>
+    <color name="gray1">#1F1F27</color>
+    <color name="gray2">#6E7273</color>
+    <color name="dark_blue">#0b4585</color>
+    <color name="home_grey_dark">#dfe6e9</color>
+    <color name="home_green">#900eba8c</color>
+    <color name="home_blue">#901da0dc</color>
+    <color name="home_green_nw">#de0bc297</color>
+    <color name="home_blue_nw">#e01da0dc</color>
+    <color name="home_light_grey">#f2f6f7</color>
+    <color name="red">#d70412</color>
+    <color name="litered">#b8ff4f5b</color>
+    <color name="fillbox">#f2f6f7</color>
+
+    <color name="leavereq_green">#39adaa</color>
+    <color name="leavereq_orange">#e57752</color>
+    <color name="leavereq_grey">#f2f6f7</color>
+    <color name="leavereq_black_font">#000000</color>
+    <color name="leavereq_grey_font">#9a9a9a</color>
+    <color name="searchDialogResultColor">#343434</color>
+    <color name="searchDialogResultHighlightColor">#b8ff4f5b</color>
+
+    <color name="colorGray">#D0D0D0</color>
+    <!--Green #39adaa
+
+Orange  #e57752
+
+Ash #f2f6f7
+
+Font black #000000
+
+Font ash #9a9a9a-->
+
+
+
+</resources>

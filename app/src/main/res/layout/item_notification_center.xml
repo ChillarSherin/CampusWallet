@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout"
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/linearLayout"
+        >
+
+        <ImageView
+            android:id="@+id/iconimage"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_clock_gallery"
+            android:contentDescription="Group Chat Icon" />
+
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test  Notification"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/raleway_light"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/linearLayout"
+        android:id="@+id/linearLayout1"
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            />
+
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is Test  Notification is "
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/raleway_light"
+            />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dark_grey"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+</RelativeLayout>

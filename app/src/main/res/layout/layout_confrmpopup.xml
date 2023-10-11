@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_fillbox"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RelaEts"
+        android:layout_width="295dp"
+        android:layout_height="165dp"
+        android:background="@drawable/curve"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/imageid"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/confirm"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageid"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmationpopup"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:id="@+id/stud_name"
+                android:textSize="15sp"
+
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@drawable/topline"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="@string/yes"
+                    android:textColor="#494747"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width=".5dp"
+                android:layout_height="45dp"
+                android:background="@color/txtgrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/deny"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="@string/no"
+                    android:gravity="center"
+                    android:textColor="#494747"
+                    android:textAllCaps="true"
+                    android:orientation="horizontal" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

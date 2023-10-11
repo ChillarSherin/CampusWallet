@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/drawerRL"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_switch"
+        android:layout_centerHorizontal="true"
+         />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Item Name"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/txtnewGrey"
+        android:textSize="12sp" />
+
+</RelativeLayout>

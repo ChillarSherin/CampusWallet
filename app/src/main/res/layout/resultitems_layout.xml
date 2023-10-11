@@ -1,0 +1,91 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:orientation="vertical"
+    >
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/Layoutmsg"
+
+        android:background="@color/white"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/Icon"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            >
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="48dp"
+                android:src="@drawable/book_icn"
+                android:layout_centerInParent="true"
+                android:contentDescription="Book"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subject"
+
+                android:textColor="@color/black"
+                android:id="@+id/subjectname"
+                />
+
+
+        </LinearLayout>
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/nextarrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="Arrow"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/txtgrey"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+

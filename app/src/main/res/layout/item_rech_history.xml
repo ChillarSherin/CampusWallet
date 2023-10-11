@@ -1,0 +1,300 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg_color"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LaytTransItem"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/ImgCanteen"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+
+            <!--<View-->
+            <!--android:id="@+id/v1"-->
+            <!--android:layout_width="2dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/greylayoutbg"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_toRightOf="@+id/ImgCanteen"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--/>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+
+
+                <TextView
+                    android:id="@+id/TvTransType"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+
+                    android:text="@string/transaction_id"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/trans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/created_on"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/amount_title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/status"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/downloadstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/recharge_in_card"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/downloadate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/download_date"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=":"
+                    android:textColor="#585A58"
+
+
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="15dp"
+                    android:text=":"
+                    android:textColor="#585A58"
+
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+
+                    android:text=":"
+                    android:textColor="#585A58"
+
+
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=":"
+                    android:textColor="#585A58"
+
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/downloadstatusdot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=":"
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/datedot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=":"
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/transID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="TRANSACTION ID  "
+                    android:textColor="#585A58"
+
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/transCount"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="000"
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/amountid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="15dp"
+                    android:text="000"
+
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/statusid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="000"
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/downloadstatusid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="000"
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/downloadatenew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="000"
+                    android:textColor="#585A58"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_arrow_green"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/white"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/viewReceiptBTN"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/noticication_leave_requestapproved"
+                android:gravity="center"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
