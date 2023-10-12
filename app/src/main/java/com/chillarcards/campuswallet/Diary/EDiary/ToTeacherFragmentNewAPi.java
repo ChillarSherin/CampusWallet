@@ -44,7 +44,6 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
     PrefManager prefManager;
     Activity activity;
     private ToteacherMessageDetailAdapter mAdapter;
-    View view;
 
     final String tag_json_object = "toteacher";
     FirebaseAnalytics mFirebaseAnalytics;
@@ -189,8 +188,8 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
                     if (relationship.size()>0) {
 
                         binding.TeacherMessageDetailsRV.setVisibility(View.VISIBLE);
-                        view.findViewById(R.id.NodataLL).setVisibility(View.GONE);
-                        view.findViewById(R.id.ErrorLL).setVisibility(View.GONE);
+                        binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.GONE);
+                        binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.GONE);
 
                         mAdapter = new ToteacherMessageDetailAdapter(activity, relationship,mFirebaseAnalytics);
                         binding.TeacherMessageDetailsRV.setAdapter(mAdapter);
@@ -201,7 +200,7 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
                         NodataTV.setText(getActivity().getResources().getString(R.string.no_data_found));
                         GoBackBTN.setText(getActivity().getResources().getString(R.string.go_back));
 //                        ErrorImage.setBackgroundResource(R.drawable.nodata);
-                        view.findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
+                        binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
                         GoBackBTN.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -216,7 +215,7 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
                 }
                 else if(code.equals("400")){
                     ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                    view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                     ErrorMessageTV.setText(getResources().getString(R.string.error_message_errorlayout));
                     CodeErrorTV.setText(getActivity().getResources().getString(R.string.code_attendance)+code);
                     ReloadBTN.setOnClickListener(new View.OnClickListener() {
@@ -232,7 +231,7 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
                     NodataTV.setText(getActivity().getResources().getString(R.string.no_data_found));
                     GoBackBTN.setText(getActivity().getResources().getString(R.string.go_back));
 //                        ErrorImage.setBackgroundResource(R.drawable.nodata);
-                    view.findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
                     GoBackBTN.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -246,7 +245,7 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
                 }else if (code.equals("401")){
 
                     ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                    view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                     ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
                     CodeErrorTV.setText(getActivity().getResources().getString(R.string.code_attendance)+code);
                     ReloadBTN.setOnClickListener(new View.OnClickListener() {
@@ -262,7 +261,7 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
                 }else if (code.equals("500")){
 
                     ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                    view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                     ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
                     CodeErrorTV.setText(getActivity().getResources().getString(R.string.code_attendance)+code);
                     ReloadBTN.setOnClickListener(new View.OnClickListener() {
@@ -287,7 +286,7 @@ public class ToTeacherFragmentNewAPi extends Fragment implements CallBack {
 
                 VolleyLog.d("Object Error : ", volleyError.getMessage());
                 ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                 ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_admin));
                 CodeErrorTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
 

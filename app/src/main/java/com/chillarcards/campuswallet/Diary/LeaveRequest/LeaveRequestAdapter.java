@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.chillarcards.campuswallet.R;
-import com.chillarcards.campuswallet.databinding.LayoutLeaveReqActivityBinding;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
@@ -42,8 +41,8 @@ public class LeaveRequestAdapter extends RecyclerView.Adapter<LeaveRequestAdapte
     @Override
     public LeaveRequestAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_leave_request, parent, false);
-        LeaveRequestAdapter.MyViewHolder vh = new LeaveRequestAdapter.MyViewHolder(v);
-        return vh;
+       // LeaveRequestAdapter.MyViewHolder vh = new LeaveRequestAdapter.MyViewHolder(v);
+        return new MyViewHolder(v);
     }
 
     @Override
@@ -98,6 +97,7 @@ public class LeaveRequestAdapter extends RecyclerView.Adapter<LeaveRequestAdapte
             txtApplied = itemView.findViewById(R.id.applied);
             txtStatus = itemView.findViewById(R.id.statusid);
             topLayout = itemView.findViewById(R.id.toplayout);
+            firstlayout = itemView.findViewById(R.id.firstlayout);
             mainContainer = itemView.findViewById(R.id.mainContainer);
 
         }

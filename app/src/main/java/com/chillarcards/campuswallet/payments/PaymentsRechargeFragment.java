@@ -83,31 +83,16 @@ public class PaymentsRechargeFragment extends Fragment {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this.getActivity().getBaseContext());
         binding.recyclerView3.setLayoutManager(mLayoutManager);
         binding.editText2.setFilters(new InputFilter[]{filter/*, new InputFilter.LengthFilter(100)*/});
-        binding.editText2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Clipboard_Utils.copyToClipboard(getActivity(), "");
-            }
-        });
+        binding.editText2.setOnClickListener(v -> Clipboard_Utils.copyToClipboard(getActivity(), ""));
         //Show keyboard and focuz on amount edittext
         binding.editText2.requestFocus();
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+//        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+//        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
 
         init();
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
-        binding.btnRecharge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btnClick();
-            }
-        });
-        binding.textView5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               btnCharges();
-            }
-        });
+        binding.btnRecharge.setOnClickListener(view -> btnClick());
+        binding.textView5.setOnClickListener(view -> btnCharges());
         return binding.getRoot();
     }
 

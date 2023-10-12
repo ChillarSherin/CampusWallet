@@ -28,7 +28,7 @@
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
 
     <application
-        android:name="com.chillarcards.campuswallet.application.CampusWallet"
+        android:name=".application.CampusWallet"
         android:fullBackupContent="@xml/backup_descriptor"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,12 +42,20 @@
         tools:replace="android:label">
 
         <service
-            android:name="com.chillarcards.campuswallet.application.MyFCMService"
+            android:name=".application.MyFCMService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <!-- [START fcm_disable_auto_init] -->
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        <!-- [END fcm_disable_auto_init] -->
 
         <!--        <receiver-->
         <!--            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"-->
@@ -63,10 +71,10 @@
             android:value="DISABLE" />
 
         <activity
-            android:name="com.chillarcards.campuswallet.login.LoginActivity"
+            android:name=".login.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.SplashScreen"
+            android:name=".SplashScreen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -76,49 +84,49 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.chillarcards.campuswallet.login.RegisterActivity"
+            android:name=".login.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.studentselection.StudentListActivity"
+            android:name=".studentselection.StudentListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.home.HomeActivity"
+            android:name=".home.HomeActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.PaymentsActivity"
+            android:name=".payments.PaymentsActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.PaymentCreateActivity"
+            android:name=".payments.PaymentCreateActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.PaymentRazorpay"
+            android:name=".payments.PaymentRazorpay"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Payment.History.PaymentHistoryActivity"
+            android:name=".Payment.History.PaymentHistoryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.PaymentXPayWebview"
+            android:name=".payments.PaymentXPayWebview"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.EDiary.E_Diary_Activity"
+            android:name=".Diary.EDiary.E_Diary_Activity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.PaymentChargesWebview"
+            android:name=".payments.PaymentChargesWebview"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.PaymentReceiptActivity"
+            android:name=".payments.PaymentReceiptActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.cardtransaction.CardTransactionActivity"
+            android:name=".payments.cardtransaction.CardTransactionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Calendar.CalendarNew"
+            android:name=".Diary.Calendar.CalendarNew"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.LeaveRequest.LeaveRequestActivity"
+            android:name=".Diary.LeaveRequest.LeaveRequestActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
 
@@ -160,104 +168,104 @@
             android:value="true" />
 
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.NoticeBoard.NoticeBoardActivity"
+            android:name=".Diary.NoticeBoard.NoticeBoardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.TimeTable.TimeTableActivity"
+            android:name=".Diary.TimeTable.TimeTableActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.TimeTable.SubjectMsgTeacher"
+            android:name=".Diary.TimeTable.SubjectMsgTeacher"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Result.ResultActivity"
+            android:name=".Diary.Result.ResultActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Attendance.AttendanceActivity"
+            android:name=".Diary.Attendance.AttendanceActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Result.ComboLineColumnChartActivity"
+            android:name=".Diary.Result.ComboLineColumnChartActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Result.ResultDetails"
+            android:name=".Diary.Result.ResultDetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.EDiary.TeachermessageDetailsActivity"
+            android:name=".Diary.EDiary.TeachermessageDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.utils.ImageDownloadActivity"
+            android:name=".utils.ImageDownloadActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Gallary.GalleryActivity"
+            android:name=".Diary.Gallary.GalleryActivity"
             android:screenOrientation="portrait" />
 <!--        <activity-->
-<!--            android:name="com.chillarcards.campuswallet.BusTracking.ParentMapsActivity"-->
+<!--            android:name=".BusTracking.ParentMapsActivity"-->
 <!--            android:screenOrientation="portrait" />-->
         <activity
-            android:name="com.chillarcards.campuswallet.payments.cardtransaction.HistoryReceiptActivity"
+            android:name=".payments.cardtransaction.HistoryReceiptActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreOrderSelection"
+            android:name=".payments.Preorder.PreOrderSelection"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreOrderTimmings"
+            android:name=".payments.Preorder.PreOrderTimmings"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreOrderHistory_Activity"
+            android:name=".payments.Preorder.PreOrderHistory_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.RechargeHistory"
+            android:name=".payments.Preorder.RechargeHistory"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreOrderOutlets_Activity"
+            android:name=".payments.Preorder.PreOrderOutlets_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreOrderCartList_Activity"
+            android:name=".payments.Preorder.PreOrderCartList_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.OrderSuccessPage"
+            android:name=".payments.Preorder.OrderSuccessPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreOrderItemsList_Activity"
+            android:name=".payments.Preorder.PreOrderItemsList_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Preorder.PreorderHistoryDetailPopup"
+            android:name=".payments.Preorder.PreorderHistoryDetailPopup"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NotificationCenter.NotificationCenterActivityNW"
+            android:name=".NotificationCenter.NotificationCenterActivityNW"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.home.AdsWebViewActivity"
+            android:name=".home.AdsWebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.InvoiceDownloadActivity"
+            android:name=".payments.InvoiceDownloadActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Payment.History.FeeInvoiceDownloadActivity"
+            android:name=".Payment.History.FeeInvoiceDownloadActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.login.PhoneAuthActivity"
+            android:name=".login.PhoneAuthActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.application.CustomErrorActivity"
+            android:name=".application.CustomErrorActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="cat.ereza.customactivityoncrash.ERROR" />
             </intent-filter>
         </activity> <!-- <service -->
-        <!-- android:name="com.chillarcards.campuswallet.UrbanAirship.UrbanFirebaseInstanceIdService"> -->
+        <!-- android:name=".UrbanAirship.UrbanFirebaseInstanceIdService"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/> -->
         <!-- </intent-filter> -->
         <!-- </service> -->
         <!-- <service -->
-        <!-- android:name="com.chillarcards.campuswallet.UrbanAirship.UrbanFirebaseMessagingService"> -->
+        <!-- android:name=".UrbanAirship.UrbanFirebaseMessagingService"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="com.google.firebase.MESSAGING_EVENT"/> -->
         <!-- </intent-filter> -->
         <!-- </service> -->
         <!-- <meta-data android:name="com.urbanairship.autopilot" -->
-        <!-- android:value="com.chillarcards.campuswallet.UrbanAirship.CWAutoPilot"/> -->
+        <!-- android:value=".UrbanAirship.CWAutoPilot"/> -->
         <!-- Listener for Receiving push payload from FCM -->
         <!-- <service android:name="com.moengage.firebase.MoEFireBaseMessagingService"> -->
         <!-- <intent-filter> -->
@@ -266,7 +274,7 @@
         <!-- </service> -->
         <!--        ================================================-->
         <!--        <service-->
-        <!--            android:name="com.chillarcards.campuswallet.OneSignal.MyNotificationExtenderService"-->
+        <!--            android:name=".OneSignal.MyNotificationExtenderService"-->
         <!--            android:exported="false"-->
         <!--            android:permission="android.permission.BIND_JOB_SERVICE">-->
         <!--            <intent-filter>-->
@@ -276,11 +284,11 @@
         <!--        <service-->
         <!--            android:name="com.onesignal.SyncJobService"-->
         <!--            android:permission="android.permission.BIND_JOB_SERVICE" />-->
-        <!--        <activity android:name="com.chillarcards.campuswallet.application.CustomConnectionBuddyActivity" />-->
+        <!--        <activity android:name=".application.CustomConnectionBuddyActivity" />-->
 
         <provider
-            android:name="com.chillarcards.campuswallet.application.GenericFileProvider"
-            android:authorities="${applicationId}.com.chillarcards.campuswallet.provider"
+            android:name=".application.GenericFileProvider"
+            android:authorities="${applicationId}..provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -289,24 +297,24 @@
         </provider>
 
         <receiver
-            android:name="com.chillarcards.campuswallet.utils.DownloadOnCompleteReceiver"
+            android:name=".utils.DownloadOnCompleteReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Transactions.TransactionSelectionActivity"
+            android:name=".payments.Transactions.TransactionSelectionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.cardtransaction.OutletMenuActivity"
+            android:name=".payments.cardtransaction.OutletMenuActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.cardtransaction.OutletMenuItemsActivity"
+            android:name=".payments.cardtransaction.OutletMenuItemsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.payments.Transactions.OnlineTransactionStatusActivity"
+            android:name=".payments.Transactions.OnlineTransactionStatusActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.Diary.Attendance.AttendancePopupActivity"
+            android:name=".Diary.Attendance.AttendancePopupActivity"
             android:theme="@style/AppDialogTheme" />
 
         <meta-data
@@ -317,29 +325,29 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.PreorderDesignActivity"
+            android:name=".NewPreOrder.PreorderDesignActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.PreOrderTabedActivity"
+            android:name=".NewPreOrder.PreOrderTabedActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.CartListActivity"
+            android:name=".NewPreOrder.CartListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.CartOrderDetailsActivity"
+            android:name=".NewPreOrder.CartOrderDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.CartStatusActivity"
+            android:name=".NewPreOrder.CartStatusActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.MyOrders.MyOrdersActivity"
+            android:name=".NewPreOrder.MyOrders.MyOrdersActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.chillarcards.campuswallet.NewPreOrder.MyOrders.MyOrderDetailsActivity"
+            android:name=".NewPreOrder.MyOrders.MyOrderDetailsActivity"
             android:screenOrientation="portrait" />
 
 <!--        <activity-->
-<!--            android:name="com.chillarcards.campuswallet.payments.PaymentsCashfreeActivity"-->
+<!--            android:name=".payments.PaymentsCashfreeActivity"-->
 <!--            android:screenOrientation="portrait" />-->
     </application>
 

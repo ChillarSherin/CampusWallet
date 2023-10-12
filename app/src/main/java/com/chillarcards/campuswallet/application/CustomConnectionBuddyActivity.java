@@ -9,6 +9,7 @@ import android.view.Window;
 
 import com.chillarcards.campuswallet.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.installations.FirebaseInstallations;
 import com.zplesac.connectionbuddy.ConnectionBuddy;
 import com.zplesac.connectionbuddy.interfaces.ConnectivityChangeListener;
 import com.zplesac.connectionbuddy.models.ConnectivityEvent;
@@ -25,8 +26,10 @@ public class CustomConnectionBuddyActivity extends AppCompatActivity implements 
         PopupInternet();
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-//        Log.d("Instance ID", FirebaseInstanceId.getInstance().getId());
+//        Log.d("Instance ID", mFirebaseAnalytics.getFirebaseInstanceId());
+//        Log.d("Instance ID -", FirebaseInstallations.getInstance().getId().toString());
     }
+
     private void PopupInternet() {
         NoInternet = new Dialog(this);
         NoInternet.requestWindowFeature(Window.FEATURE_NO_TITLE);
