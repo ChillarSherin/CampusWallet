@@ -12,6 +12,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,8 +43,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.chillarcards.campuswallet.R;
 import com.chillarcards.campuswallet.databinding.LayoutHomeActivityBinding;
 import com.chillarcards.campuswallet.utils.BottomNavigationViewHelper;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 
 import java.io.UnsupportedEncodingException;
@@ -151,8 +155,18 @@ public class HomeActivity extends CustomConnectionBuddyActivity implements CallP
         ReloadBTN = binding.getRoot().findViewById(R.id.ReloadBTN);
         ErrorMessageTV=binding.getRoot().findViewById(R.id.ErrorMessageTV);
         CodeErrorTV=binding.getRoot().findViewById(R.id.CodeErrorTV);
+        FirebaseMessaging.getInstance().getToken()
+            .addOnCompleteListener(task -> {
+                if (!task.isSuccessful()) {
+                    Log.w("TAG", "Fetching FCM registration token failed", task.getException());
+                    return;
+                }
+                // Get new FCM registration token
+                String token = task.getResult();
+                // Log and toast
+                Log.d("TAG token", "msg"+token);
+            });
 
-        
         //        Survicate.init(this);
         activity=this;
         DatabaseHandler db = new DatabaseHandler(activity);

@@ -45,9 +45,8 @@ public class CardHistoryAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        int pos=position;
 
-        if(pos==0)
+        if(position ==0)
         {
             CardHistoryFragment paymentHistoryFragment = new CardHistoryFragment(refreshStatement);
             mFirebaseAnalytics.logEvent(cntxt.getResources().getString(R.string.Transaction_History_)+"All"
@@ -55,7 +54,7 @@ public class CardHistoryAdapter extends FragmentStatePagerAdapter {
             String str = new Gson().toJson(transactionList);
             Bundle bundle=new Bundle();
             bundle.putString("transactionArrList",str);
-            bundle.putInt("posSpec",pos);
+            bundle.putInt("posSpec", position);
             paymentHistoryFragment.setArguments(bundle);
             return paymentHistoryFragment;
         }
@@ -64,10 +63,10 @@ public class CardHistoryAdapter extends FragmentStatePagerAdapter {
             CardHistoryFragment paymentHistoryFragment=new CardHistoryFragment(refreshStatement);
             mFirebaseAnalytics.logEvent(cntxt.getResources().getString(R.string.Transaction_History_)+catagotyList.get(position).getName()
                     +cntxt.getResources().getString(R.string._Tab_Selected),new Bundle());
-            String str = new Gson().toJson(SelectFragmentData(pos));
+            String str = new Gson().toJson(SelectFragmentData(position));
             Bundle bundle=new Bundle();
             bundle.putString("transactionArrList",str);
-            bundle.putInt("posSpec",pos);
+            bundle.putInt("posSpec", position);
             paymentHistoryFragment.setArguments(bundle);
             return paymentHistoryFragment;
         }
