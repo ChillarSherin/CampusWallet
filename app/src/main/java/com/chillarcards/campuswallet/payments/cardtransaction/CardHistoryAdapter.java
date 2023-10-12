@@ -2,6 +2,8 @@ package com.chillarcards.campuswallet.payments.cardtransaction;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -44,10 +46,10 @@ public class CardHistoryAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         int pos=position;
+
         if(pos==0)
         {
-            CardHistoryFragment paymentHistoryFragment;
-            paymentHistoryFragment = new CardHistoryFragment(refreshStatement);
+            CardHistoryFragment paymentHistoryFragment = new CardHistoryFragment(refreshStatement);
             mFirebaseAnalytics.logEvent(cntxt.getResources().getString(R.string.Transaction_History_)+"All"
                     +cntxt.getResources().getString(R.string._Tab_Selected),new Bundle());
             String str = new Gson().toJson(transactionList);

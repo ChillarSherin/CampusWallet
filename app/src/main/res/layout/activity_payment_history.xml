@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="codmob.com.campuswallet.Payment.History.PaymentHistoryActivity">
+    tools:context=".Payment.History.PaymentHistoryActivity">
 
     <RelativeLayout
         android:id="@+id/linearLayout"
@@ -31,10 +31,8 @@
             android:id="@+id/BackIV"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="0dp"
             android:layout_marginStart="0dp"
             android:padding="10dp"
             android:scaleType="fitCenter"

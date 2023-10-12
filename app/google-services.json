@@ -8,96 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:60394857485:android:2fd4690933f8a744",
-        "android_client_info": {
-          "package_name": "chillarcards.com.cwquiz"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "60394857485-iukesp66aperkjp62tll7fsfqvn5p21u.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "chillarcards.com.cwquiz",
-            "certificate_hash": "e364d8fbae2dcf07292f3bc4f6cf9210b8128b33"
-          }
-        },
-        {
-          "client_id": "60394857485-uose0v8kh85bpjq17dq3660j85q90kae.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "chillarcards.com.cwquiz",
-            "certificate_hash": "768a112e369505674c25082e80ed96cdd6f04a21"
-          }
-        },
-        {
-          "client_id": "60394857485-0rsn88b8pd2h2m94vlalnkdg4jgg9ssm.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "chillarcards.com.cwquiz",
-            "certificate_hash": "3c743fe980db5a2023154910fa04b6d1ff7fbbfa"
-          }
-        },
-        {
-          "client_id": "60394857485-mtmgcmflo3700b83v6v40cp6a4apif0m.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "chillarcards.com.cwquiz",
-            "certificate_hash": "ff6f8ca73eb852a4ef49da55b6c77f85a5067bf4"
-          }
-        },
-        {
-          "client_id": "60394857485-2r1nq16om118gkvm5lpjm72iql1p60bb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "chillarcards.com.cwquiz",
-            "certificate_hash": "7889ed9d9678c25f2de9d22c460707fc63ee934b"
-          }
-        },
-        {
-          "client_id": "60394857485-u1v0ikgpfdm7jm9qnlhaiu81nr47mueu.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDL8yK1aUAWEV6-7VVnaPBoW10Y_ubJ-No"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "60394857485-u1v0ikgpfdm7jm9qnlhaiu81nr47mueu.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "60394857485-1cr0jodg6uc6lds7l6co4fjngcs29ikb.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "chillar.Campus-Wallet-Genius"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:60394857485:android:172675189e3a4d2b",
         "android_client_info": {
           "package_name": "codmob.com.campuswalletTeacherApp"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "60394857485-o1s3u8nmd0gcvgkgmk5mssjfff2rsvnm.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "codmob.com.campuswalletTeacherApp",
-            "certificate_hash": "e364d8fbae2dcf07292f3bc4f6cf9210b8128b33"
-          }
-        },
         {
           "client_id": "60394857485-1f29tqkievfo0031cai2gfvlbtvk2bpr.apps.googleusercontent.com",
           "client_type": 1,
@@ -107,11 +23,19 @@
           }
         },
         {
-          "client_id": "60394857485-iba8c7dpleph0k1pjfqd2rgngllkogeh.apps.googleusercontent.com",
+          "client_id": "60394857485-4cgml0nuk82pnifbt5sa40prlk1fmhm8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "codmob.com.campuswalletTeacherApp",
-            "certificate_hash": "382e8361f4b1be11376312865a1ff0c7ddcdf1dc"
+            "certificate_hash": "602f1c5665e065de2d7d5045c31949b04beefa38"
+          }
+        },
+        {
+          "client_id": "60394857485-d4pr74jc6q3172chmrt5tut6c5qqc1cb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "codmob.com.campuswalletTeacherApp",
+            "certificate_hash": "58f6d4761492717a4d508177d88c34adcf853b6f"
           }
         },
         {
@@ -131,11 +55,19 @@
           }
         },
         {
-          "client_id": "60394857485-4cgml0nuk82pnifbt5sa40prlk1fmhm8.apps.googleusercontent.com",
+          "client_id": "60394857485-iba8c7dpleph0k1pjfqd2rgngllkogeh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "codmob.com.campuswalletTeacherApp",
-            "certificate_hash": "602f1c5665e065de2d7d5045c31949b04beefa38"
+            "certificate_hash": "382e8361f4b1be11376312865a1ff0c7ddcdf1dc"
+          }
+        },
+        {
+          "client_id": "60394857485-o1s3u8nmd0gcvgkgmk5mssjfff2rsvnm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "codmob.com.campuswalletTeacherApp",
+            "certificate_hash": "e364d8fbae2dcf07292f3bc4f6cf9210b8128b33"
           }
         },
         {
@@ -175,46 +107,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "60394857485-5shb754d87jubn0o6nkgo10mempv7h86.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.chillarcards.campuswallet",
-            "certificate_hash": "d26a43b4c23de54a29166fb03ead6d2a730ffca7"
-          }
-        },
-        {
-          "client_id": "60394857485-ojat9aq22b77asaq3hehhi3gri1i4p1k.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.chillarcards.campuswallet",
-            "certificate_hash": "e364d8fbae2dcf07292f3bc4f6cf9210b8128b33"
-          }
-        },
-        {
-          "client_id": "60394857485-6g0d30baj1d0nb50kkkbqr34te489lar.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.chillarcards.campuswallet",
-            "certificate_hash": "861c9d9911d3a4971b3c242a5e5d48068e8a2d3a"
-          }
-        },
-        {
-          "client_id": "60394857485-u8nsl422o4faefcn5bs7paduhbgrkkmn.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.chillarcards.campuswallet",
-            "certificate_hash": "768a112e369505674c25082e80ed96cdd6f04a21"
-          }
-        },
-        {
-          "client_id": "60394857485-atnr96e3kirv5abbm7kvibmeep4cneom.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.chillarcards.campuswallet",
-            "certificate_hash": "382e8361f4b1be11376312865a1ff0c7ddcdf1dc"
-          }
-        },
-        {
           "client_id": "60394857485-2ethk7grbcdndpvino7hjochrqn6brfu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -228,6 +120,54 @@
           "android_info": {
             "package_name": "com.chillarcards.campuswallet",
             "certificate_hash": "ff6f8ca73eb852a4ef49da55b6c77f85a5067bf4"
+          }
+        },
+        {
+          "client_id": "60394857485-5shb754d87jubn0o6nkgo10mempv7h86.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chillarcards.campuswallet",
+            "certificate_hash": "d26a43b4c23de54a29166fb03ead6d2a730ffca7"
+          }
+        },
+        {
+          "client_id": "60394857485-6g0d30baj1d0nb50kkkbqr34te489lar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chillarcards.campuswallet",
+            "certificate_hash": "861c9d9911d3a4971b3c242a5e5d48068e8a2d3a"
+          }
+        },
+        {
+          "client_id": "60394857485-atnr96e3kirv5abbm7kvibmeep4cneom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chillarcards.campuswallet",
+            "certificate_hash": "382e8361f4b1be11376312865a1ff0c7ddcdf1dc"
+          }
+        },
+        {
+          "client_id": "60394857485-mi07fnctig8ug9qev6d1hed770k1popc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chillarcards.campuswallet",
+            "certificate_hash": "32cb20ce27325d5b5ccc9346417766cc5c980149"
+          }
+        },
+        {
+          "client_id": "60394857485-ojat9aq22b77asaq3hehhi3gri1i4p1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chillarcards.campuswallet",
+            "certificate_hash": "e364d8fbae2dcf07292f3bc4f6cf9210b8128b33"
+          }
+        },
+        {
+          "client_id": "60394857485-u8nsl422o4faefcn5bs7paduhbgrkkmn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chillarcards.campuswallet",
+            "certificate_hash": "768a112e369505674c25082e80ed96cdd6f04a21"
           }
         },
         {

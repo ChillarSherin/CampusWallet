@@ -43,7 +43,6 @@ public class FromTeacherFragment extends Fragment {
 
     private Integer messageID;
 
-    View view;
     Button ReloadBTN,GoBackBTN;
     TextView ErrorMessageTV,CodeErrorTV,NodataTV;
     
@@ -91,12 +90,12 @@ public class FromTeacherFragment extends Fragment {
         binding.FromteacherRV.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         binding.FromteacherRV.setItemAnimator(new DefaultItemAnimator());
         binding.FromteacherRV.setNestedScrollingEnabled(false);
-        view.findViewById(R.id.NodataLL).setVisibility(View.GONE);
-        view.findViewById(R.id.ErrorLL).setVisibility(View.GONE);
+        binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.GONE);
+        binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.GONE);
         binding.FromteacherSRL.setColorSchemeResources(R.color.colorAccent);
         phpGetAttendanceMain();
         mFirebaseAnalytics=FirebaseAnalytics.getInstance(getActivity());
-        return view;
+        return binding.getRoot();
     }
 
     @Override
@@ -159,8 +158,8 @@ public class FromTeacherFragment extends Fragment {
 
                     if (subcanteen.size()>0){
 
-                        view.findViewById(R.id.NodataLL).setVisibility(View.GONE);
-                        view.findViewById(R.id.ErrorLL).setVisibility(View.GONE);
+                        binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.GONE);
+                        binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.GONE);
                         binding.FromteacherRV.setVisibility(View.VISIBLE);
 
                         // err.setVisibility(View.GONE);
@@ -178,7 +177,7 @@ public class FromTeacherFragment extends Fragment {
                         NodataTV.setText(getActivity().getResources().getString(R.string.no_data_found));
                         GoBackBTN.setText(getActivity().getResources().getString(R.string.go_back));
 //                        ErrorImage.setBackgroundResource(R.drawable.nodata);
-                        view.findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
+                        binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
                         GoBackBTN.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -196,7 +195,7 @@ public class FromTeacherFragment extends Fragment {
 
                     binding.FromteacherRV.setVisibility(View.GONE);
                     ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                    view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                     ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
                     CodeErrorTV.setText(getActivity().getResources().getString(R.string.code_attendance)+code);
                     ReloadBTN.setOnClickListener(new View.OnClickListener() {
@@ -213,7 +212,7 @@ public class FromTeacherFragment extends Fragment {
                     NodataTV.setText(getActivity().getResources().getString(R.string.no_data_found));
                     GoBackBTN.setText(getActivity().getResources().getString(R.string.go_back));
 //                        ErrorImage.setBackgroundResource(R.drawable.nodata);
-                    view.findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
                     GoBackBTN.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -227,7 +226,7 @@ public class FromTeacherFragment extends Fragment {
                 }else if (code.equals("401")){
                     binding.FromteacherRV.setVisibility(View.GONE);
                     ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                    view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                     ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
                     CodeErrorTV.setText(getActivity().getResources().getString(R.string.code_attendance)+code);
                     ReloadBTN.setOnClickListener(new View.OnClickListener() {
@@ -243,7 +242,7 @@ public class FromTeacherFragment extends Fragment {
                 }else if (code.equals("500")){
                     binding.FromteacherRV.setVisibility(View.GONE);
                     ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                    view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                    binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                     ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
                     CodeErrorTV.setText(getActivity().getResources().getString(R.string.code_attendance)+code);
                     ReloadBTN.setOnClickListener(new View.OnClickListener() {
@@ -269,7 +268,7 @@ public class FromTeacherFragment extends Fragment {
                 binding.FromteacherRV.setVisibility(View.GONE);
 //                Toast.makeText(getActivity(), getResources().getString(R.string.network_error_try), Toast.LENGTH_SHORT).show();
                 ReloadBTN.setText(getActivity().getResources().getString(R.string.go_back));
-                view.findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                binding.getRoot().findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
                 ErrorMessageTV.setText(getActivity().getResources().getString(R.string.error_message_admin));
                 CodeErrorTV.setText(getActivity().getResources().getString(R.string.error_message_errorlayout));
                 ReloadBTN.setOnClickListener(new View.OnClickListener() {

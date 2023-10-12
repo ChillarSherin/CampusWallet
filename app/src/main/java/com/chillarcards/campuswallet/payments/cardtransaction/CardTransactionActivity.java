@@ -63,7 +63,7 @@ public class CardTransactionActivity extends CustomConnectionBuddyActivity imple
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_history);
+      //  setContentView(R.layout.activity_payment_history);
         binding = ActivityPaymentHistoryBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
@@ -141,30 +141,28 @@ public void menuClickFn()
         URL = Constants.BASE_URL  + "r_card_transaction_history.php?" + parameters.replaceAll(" ", "%20");
         System.out.println("CHECK---> URL " + URL);
         final CommonSSLConnection commonSSLConnection=new CommonSSLConnection();
-        StringRequest jsonObjectRequestLogin = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String jsonObject) {
-                binding.HistoryPB.setVisibility(View.GONE);
-                //System.out.println("CHECK---> Response " + jsonObject);
-                Gson gson = new Gson();
+        StringRequest jsonObjectRequestLogin = new StringRequest(Request.Method.GET, URL, jsonObject -> {
+            binding.HistoryPB.setVisibility(View.GONE);
+            System.out.println("CHECK---> Response " + jsonObject);
+            Gson gson = new Gson();
 
-                Cardhistory model = gson.fromJson(jsonObject, Cardhistory.class);
-                Status status = model.getStatus();
-                String code = status.getCode();
+            Cardhistory model = gson.fromJson(jsonObject, Cardhistory.class);
+            Status status = model.getStatus();
+            String code = status.getCode();
 
-                if (code.equals("200")) {
+            if (code.equals("200")) {
 
-                    Code code1 = model.getCode();
-                    catagotyList.clear();
-                    String walletbalance=code1.getCurrent_balance();
-                    binding.balancewalletTV.setText(getResources().getString(R.string.wallet_balance_home)+walletbalance);
-                    binding.StudentnameTV.setText(StudentNasme);
+                Code code1 = model.getCode();
+                catagotyList.clear();
+                String walletbalance=code1.getCurrent_balance();
+                binding.balancewalletTV.setText(getResources().getString(R.string.wallet_balance_home)+walletbalance);
+                binding.StudentnameTV.setText(StudentNasme);
 
-                    TransactionCategory all=new TransactionCategory("0","All");
-                    catagotyList.add(all);
-                    catagotyList.addAll(code1.getTransactionCategories());
-                    transactionList.clear();
-                    transactionList=code1.getTransactions();
+                TransactionCategory all=new TransactionCategory("0","All");
+                catagotyList.add(all);
+                catagotyList.addAll(code1.getTransactionCategories());
+                transactionList.clear();
+                transactionList=code1.getTransactions();
 //                    Collections.reverse(transactionList);
 //                    for (Transaction transaction: transactionList) {
 //                        //System.out.println("ABHINAND :: STATEMENT :: "+transaction.getTransactionID());
@@ -173,59 +171,50 @@ public void menuClickFn()
 //                    transactionList.clear();
 //                    transactionList=databaseHandler.getAllWalletTransactions(studentId);
 
-                    historyAdapter=new CardHistoryAdapter(getSupportFragmentManager(),catagotyList,transactionList,
-                            CardTransactionActivity.this,mFirebaseAnalytics,CardTransactionActivity.this);
-                    HistoryVP.setAdapter(historyAdapter); // setting adapter to view pager
+                historyAdapter=new CardHistoryAdapter(getSupportFragmentManager(),catagotyList,transactionList,
+                        CardTransactionActivity.this,mFirebaseAnalytics,CardTransactionActivity.this);
+                HistoryVP.setAdapter(historyAdapter); // setting adapter to view pager
 
-                    HistoryTL.setupWithViewPager(HistoryVP); //setting up tab with view pager
-                    HistoryTL.setTabMode(TabLayout.MODE_SCROLLABLE);
+                binding.PaymentHistoryTL.setupWithViewPager(HistoryVP); //setting up tab with view pager
+                binding.PaymentHistoryTL.setTabMode(TabLayout.MODE_SCROLLABLE);
 
-                    HistoryTL.getTabAt(posspec).select();
+                binding.PaymentHistoryTL.getTabAt(posspec).select();
 
-                }
-                else  if (code.equals("204"))
-                {
-                    Code code1 = model.getCode();
-                    catagotyList.clear();
-                    String walletbalance=code1.getCurrent_balance();
-                    binding.balancewalletTV.setText(getResources().getString(R.string.wallet_balance_home)+walletbalance);
-                    binding.StudentnameTV.setText(StudentNasme);
+            }
+            else  if (code.equals("204"))
+            {
+                Code code1 = model.getCode();
+                catagotyList.clear();
+                String walletbalance=code1.getCurrent_balance();
+                binding.balancewalletTV.setText(getResources().getString(R.string.wallet_balance_home)+walletbalance);
+                binding.StudentnameTV.setText(StudentNasme);
 
-                    TransactionCategory all=new TransactionCategory("0","All");
-                    catagotyList.add(all);
-                    catagotyList.addAll(code1.getTransactionCategories());
+                TransactionCategory all=new TransactionCategory("0","All");
+                catagotyList.add(all);
+                catagotyList.addAll(code1.getTransactionCategories());
 
-                    transactionList=new ArrayList<>();
-                    transactionList.clear();
+                transactionList=new ArrayList<>();
+                transactionList.clear();
 //                    transactionList=databaseHandler.getAllWalletTransactions(studentId);
 
-                    historyAdapter=new CardHistoryAdapter(getSupportFragmentManager(),catagotyList,transactionList,
-                            CardTransactionActivity.this,mFirebaseAnalytics,CardTransactionActivity.this);
-                    HistoryVP.setAdapter(historyAdapter); // setting adapter to view pager
+                historyAdapter=new CardHistoryAdapter(getSupportFragmentManager(),catagotyList,transactionList,
+                        CardTransactionActivity.this,mFirebaseAnalytics,CardTransactionActivity.this);
+                HistoryVP.setAdapter(historyAdapter); // setting adapter to view pager
 
-                    HistoryTL.setupWithViewPager(HistoryVP); //setting up tab with view pager
-                    HistoryTL.setTabMode(TabLayout.MODE_SCROLLABLE);
+                binding.PaymentHistoryTL.setupWithViewPager(HistoryVP); //setting up tab with view pager
+                binding.PaymentHistoryTL.setTabMode(TabLayout.MODE_SCROLLABLE);
 
-                    HistoryTL.getTabAt(posspec).select();
-                }
-                else {
+                binding.PaymentHistoryTL.getTabAt(posspec).select();
+            }
+            else {
 
-                    String message = status.getMessage();
-                    ReloadBTN.setText(getResources().getString(R.string.go_back));
-                    findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
-                    ErrorMessageTV.setText(getResources().getString(R.string.error_message_errorlayout));
-                    CodeErrorTV.setText(getResources().getString(R.string.code_attendance)+code);
-                    ReloadBTN.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-
-                            onBackPressed();
-
-                        }
-                    });
-                    Toast.makeText(CardTransactionActivity.this, message, Toast.LENGTH_SHORT).show();
-                }
+                String message = status.getMessage();
+                ReloadBTN.setText(getResources().getString(R.string.go_back));
+                findViewById(R.id.ErrorLL).setVisibility(View.VISIBLE);
+                ErrorMessageTV.setText(getResources().getString(R.string.error_message_errorlayout));
+                CodeErrorTV.setText(getResources().getString(R.string.code_attendance)+code);
+                ReloadBTN.setOnClickListener(v -> onBackPressed());
+                Toast.makeText(CardTransactionActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override

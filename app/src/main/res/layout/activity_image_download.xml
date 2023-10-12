@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gallery"
-    tools:context="codmob.com.campuswallet.utils.ImageDownloadActivity">
+    tools:context=".utils.ImageDownloadActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline18"

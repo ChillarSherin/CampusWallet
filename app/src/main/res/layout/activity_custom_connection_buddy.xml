@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="codmob.com.campuswallet.application.CustomConnectionBuddyActivity">
+    tools:context=".application.CustomConnectionBuddyActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

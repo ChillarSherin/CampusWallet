@@ -36,7 +36,6 @@ public class CardHistoryFragment extends Fragment {
     Context cntxt;
     CardHistoryFragmentAdapterdummy mAdapter;
 
-    View view;
     int posSpec;
     FirebaseAnalytics mFirebaseAnalytics;
     RefreshStatement refreshStatement;
@@ -64,7 +63,7 @@ public class CardHistoryFragment extends Fragment {
             transactionList= gson.fromJson(jsonTransactionArray,token.getType());
 
             if (transactionList.size()!=0) {
-                view.findViewById(R.id.NodataLL).setVisibility(View.GONE);
+                binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.GONE);
                 binding.TransactionListRV.setVisibility(View.VISIBLE);
                 mAdapter = new CardHistoryFragmentAdapterdummy(transactionList, getActivity(),posSpec,mFirebaseAnalytics);
                 binding.TransactionListRV.setAdapter(mAdapter);
@@ -76,15 +75,12 @@ public class CardHistoryFragment extends Fragment {
                 NodataTV.setText(getActivity().getResources().getString(R.string.no_data_found));
                 GoBackBTN.setText(getActivity().getResources().getString(R.string.go_back));
 //                        ErrorImage.setBackgroundResource(R.drawable.nodata);
-                view.findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
+                binding.getRoot().findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
                 GoBackBTN.setVisibility(View.GONE);
             }
-            binding.WalletTransactionSRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-                @Override
-                public void onRefresh() {
-                    refreshStatement.onStatementRefresh();
-                    binding.WalletTransactionSRL.setRefreshing(false);
-                }
+            binding.WalletTransactionSRL.setOnRefreshListener(() -> {
+                refreshStatement.onStatementRefresh();
+                binding.WalletTransactionSRL.setRefreshing(false);
             });
         }
     }
@@ -106,7 +102,7 @@ public class CardHistoryFragment extends Fragment {
         binding.WalletTransactionSRL.setColorSchemeResources(R.color.colorAccent);
 
         mFirebaseAnalytics=FirebaseAnalytics.getInstance(getActivity());
-        return view;
+        return binding.getRoot();
     }
 
 

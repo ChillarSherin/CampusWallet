@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_fillbox"
-    tools:context="codmob.com.campuswallet.payments.Transactions.TransactionSelection\Activity">
+    tools:context=".payments.Transactions.TransactionSelectionActivity">
 
     <RelativeLayout
         android:id="@+id/linearLayout"
@@ -57,7 +57,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/WalletTransactionsLL"
             android:layout_width="0dp"
             android:layout_height="0dp"

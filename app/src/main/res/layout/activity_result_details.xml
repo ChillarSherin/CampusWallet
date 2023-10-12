@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="codmob.com.campuswallet.Diary.Result.ResultDetails">
+    tools:context=".Diary.Result.ResultDetails">
     <RelativeLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"

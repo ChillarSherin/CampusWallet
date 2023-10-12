@@ -158,14 +158,9 @@ public class NotificationCenterActivityNW extends CustomConnectionBuddyActivity 
             findViewById(R.id.NodataLL).setVisibility(View.VISIBLE);
             GoBackBTN.setText(getResources().getString(R.string.go_back));
             findViewById(R.id.ErrorLL).setVisibility(View.GONE);
-            GoBackBTN.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onBackPressed();
-                }
-            });
+            GoBackBTN.setOnClickListener(v -> onBackPressed());
         }
-        //System.out.println("NOTI : 5  ");
-        //System.out.println("SHANIL DATA3  : "+Body);
+        System.out.println("NOTI : 5  ");
+        System.out.println("SHANIL DATA3  : "+Body);
     }
 }

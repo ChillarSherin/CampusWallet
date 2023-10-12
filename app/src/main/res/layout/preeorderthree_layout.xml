@@ -6,7 +6,7 @@
     android:id="@+id/activity_user__profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="codmob.com.campuswallet.payments.Preorder.PreOrderItemsList_Activity">
+    tools:context=".payments.Preorder.PreOrderItemsList_Activity">
 
 
     <RelativeLayout

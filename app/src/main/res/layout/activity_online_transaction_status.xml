@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="codmob.com.campuswallet.Payments.Transactions.OnlineTransactionStatusActivity">
+    tools:context=".Payments.Transactions.OnlineTransactionStatusActivity">
 
     <RelativeLayout
         android:id="@+id/linearLayout"

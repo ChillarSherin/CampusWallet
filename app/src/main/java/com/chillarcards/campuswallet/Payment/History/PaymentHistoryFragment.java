@@ -36,7 +36,6 @@ public class PaymentHistoryFragment extends Fragment {
     HistoryFragmentAdapterdummy mAdapter;
     RefreshStatement refreshStatement;
 
-    View view;
     int tabpos;
     FirebaseAnalytics mFirebaseAnalytics;
     private FragmentPaymentHistoryBinding binding;
@@ -108,7 +107,7 @@ public class PaymentHistoryFragment extends Fragment {
         mFirebaseAnalytics=FirebaseAnalytics.getInstance(getActivity());
         binding.WalletTransactionSRL.setColorSchemeResources(R.color.colorAccent);
 
-        return view;
+        return binding.getRoot();
     }
 
 
