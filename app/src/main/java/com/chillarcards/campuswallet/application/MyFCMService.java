@@ -27,8 +27,6 @@ public class MyFCMService extends FirebaseMessagingService {
 
     String TAG = "MyFCMService";
     PrefManager prefManager;
-
-
     public MyFCMService() {
     }
 
@@ -81,10 +79,7 @@ public class MyFCMService extends FirebaseMessagingService {
         // message, here is where that should be initiated. See sendNotification method below.
 
 
-        /***************************/
         sendNotification("TEST MESSAGE");
-
-
         /***********************/
 
     }
@@ -125,7 +120,7 @@ public class MyFCMService extends FirebaseMessagingService {
 
     /**
      * Persist token to third-party servers.
-     *
+     * <p>
      * Modify this method to associate the user's FCM InstanceID token with any server-side account
      * maintained by your application.
      *

@@ -1,26 +1,18 @@
 package com.chillarcards.campuswallet.NotificationCenter;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-//import com.onesignal.OneSignal;
-
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import com.chillarcards.campuswallet.application.PrefManager;
-import com.chillarcards.campuswallet.login.LoginActivity;
 import com.chillarcards.campuswallet.networkmodels.OnlineTransactionHistory.Transaction;
 import com.chillarcards.campuswallet.networkmodels.OnlineTransactionHistory.TrasactionCategory;
 import com.chillarcards.campuswallet.networkmodels.cardtransactionhistory.TransactionCategory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
